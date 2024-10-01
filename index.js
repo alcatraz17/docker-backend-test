@@ -1,4 +1,7 @@
 const express = require("express");
+require("dotenv").config();
+
+const { PORT = 3030 } = process.env;
 
 const app = express();
 
@@ -14,6 +17,6 @@ app.get("/", (req, res) => {
   }
 });
 
-app.listen(4070, () => {
+app.listen(PORT, () => {
   console.log("Server running on port 4070");
 });
